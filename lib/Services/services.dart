@@ -14,7 +14,7 @@ class NewsApi {
     var jsonData = jsonDecode(response.body);
 
     if (jsonData["status"] == 'ok') {
-      dataStore = []; // Clear previous data
+      dataStore = [];
       jsonData["articles"].forEach((element) {
         if (element['urlToImage'] != null &&
             element['description'] != null &&
